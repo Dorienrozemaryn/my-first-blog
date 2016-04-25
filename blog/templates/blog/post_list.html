@@ -1,20 +1,19 @@
 <html>
     <head>
-        <title>Dorien's blog</title>
+        <title>Django Girls blog</title>
     </head>
-
     <body>
         <div>
-            <h1><font color="pink">Dorien's Blog</font></h1>
+            <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
+    {% for post in posts %}
         <div>
-            <h2><font color="pink"><b>Hiephoi, daar is ie dan!</b></font>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
         </div>
+    {% endfor %}
 
-        <div>
-            <p><font coloor="gray"><b>Gepubliceerd: 23 april 2016, 21:03u.</font></b></p>
-            <p><font color="gray">Het is me eindelijk gelukt, een heuze blog!</font></p>
-        </div>
     </body>
 </html>
